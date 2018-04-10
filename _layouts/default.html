@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113289574-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-113289574-1');
+        gtag('config', 'GA_TRACKING_ID', {
+            'link_attribution': true
+        });
+
+    </script>
+
+
+
+    <!-- Global site tag (gtag.js) - Google AdWords: 815712820 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-815712820"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'AW-815712820');
+    </script>
+
+
+
+    <!-- Event snippet for Signed up for beta conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-815712820/gkzxCNu19n0QtJT7hAM',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
+
+    <script>
+        function gtag_report_internal_click(to) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'click', {
+                'event_category':'internal_link',
+                'event_label':to,
+            });
+            return false;
+        }
+    </script>
+
+
+
+
+
+
+    <meta charset="utf-8">
+    <title>LightTag - The easy way to annotate at scale</title>
+    <meta name="description" content="Love LightTag."/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NLP Annotation for Teams">
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="LightTag - The easy way to annotate at scale">
+    <meta itemprop="description" content="NLP Annotation for Teams">
+    <meta itemprop="image" content="http://lighttag.io/img/suggestions.gif">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="http://lighttag.io">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="LightTag - The easy way to annotate at scale">
+    <meta property="og:description" content="NLP Annotation for Teams">
+    <meta property="og:image" content="http://lighttag.io/img/suggestions.gif">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LightTag - The easy way to annotate at scale">
+    <meta name="twitter:description" content="NLP Annotation for Teams">
+    <meta name="twitter:image" content="http://lighttag.io/img/suggestions.gif">
+
+
+    {% include style.html %}
+</head>
+<body>
+    {%include navbar.html %}
+    <div class="root bg-primary">
+            <div> &nbsp; &nbsp; &nbsp; &nbsp;</div>
+            <div> &nbsp; &nbsp; &nbsp; &nbsp;</div>
+            <div> &nbsp; &nbsp; &nbsp; &nbsp;</div>
+            
+        {{ content }}
+        {% include footer.html %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+---
+# You don't need to edit this file, it's empty on purpose.
+# Edit theme's home layout instead if you wanna make some changes
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+layout: default
+---
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://checkout.stripe.com/checkout.js"></script>
+
+<script src="/assets/js/signup_utils.js"></script>
+<section class="hero pt-5">
+<div class="container ">
+    <div class="row">
+        <div class="col-md-6   text-white" id="instructions_parent">
+            
+            <h3>
+                What is going to happen when you sign up ?  
+            </h3>
+            <div class="row ">
+                <ul class=" ">
+                    <li>You select a name for your private LightTag site (you.lighttag.io) </li>
+                    <li>Securely enter your payment details</li>
+                    <li>We'll set up your private site within 10 minutes</li>
+                    <li>You'll receive an email as soon as it's ready</li>
+                </ul>
+            </div>
+        </div>
+
+            <div class="col-md-4   text-white" id="steps_container">
+                <div class="row  " id="step_1">
+                    <div class="col-md-12 ">
+                        <h3> Step 1</h3>
+                        
+                        <h4> Select a subdomain from which you'll use LightTag</h4>
+                    </div>
+
+                        <form class="form-inline" onsubmit="check_domain_availibilty" id="domain_form">
+                                
+                                    <div class="col-md-12 ">
+                                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                            <input 
+                                                type="text" 
+                                                class="form-control" 
+                                                id="domain_name_field" 
+                                                placeholder="your_subdomain">
+                                            
+                                            <div  class="input-group-addon text-primary" id="basic-addon2">.lighttag.io</div>
+                                        </div>
+                                        <small id="availble_rejected" class="text-danger  d-none">
+                                                This domain is not availble.
+                                                <i class="material-icons dp36 icon-box" id="availble_rejected">error</i>
+                                        </small>      
+
+                                    </div>
+
+                                <button 
+                                    type="submit" 
+                                    class="btn btn-white btn-radius text-primary btn-lg mt-3 col-md-7 col-sm-3 offset-md-2 " 
+                                    id="chk_availibility_btn"
+                                >
+                                    Check Availibility
+                                    <i class="material-icons dp36 icon-box d-none" id="availble_done">check_circle</i>
+                                    
+                                    <span class="glyphicon glyphicon-envelope"></span>
+                                </button>
+                                
+                        </form>
+                    
+                        
+                </div>
+            <div class="row " id="step_2">
+                <div class="col-md-12">
+                        <h3> Step 2</h3> 
+                        <h4> Add a payment method. We'll only charge you for what you use </h4> 
+                </div>
+
+                
+                        <button 
+                            id="stripe-button" 
+                            class="btn btn-primary btn-radius text-primary btn-lg mt-3 col-md-7 offset-md-2 disabled" >
+                                Subscribe To LightTag
+                        </button> 
+                
+                
+            </div> 
+    <!-- End of steps container        -->
+    </div> 
+</div>
+    
+</div>
+</section>
+<script>
+
+</script>
+        
+<script>
+    $('#domain_form').submit(function(e){
+        e.preventDefault();
+        check_domain_availibilty(e)
+    });
+
+
+</script>
