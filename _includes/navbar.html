@@ -4,21 +4,24 @@
             aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a href="/"><img class="brand-logo " src="assets/img/logo.png"/> </a>
+    <a href="{{site.url}}"><img class="brand-logo " src="{{site.url}}/assets/img/logo.png"/> </a>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item mr-3">
-                <a class="nav-link page-scroll" href="/#features" onclick="gtag_report_internal_click('features')">Features <span class="sr-only">(current)</span></a>
+                <a class="nav-link page-scroll" href="{{site.url}}/#features" onclick="gtag_report_internal_click('features')">Features <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item mr-3">
                     <a class="nav-link page-scroll" href="https://guide.lighttag.io" target="_blank" onclick="gtag_report_internal_click('guide')">User Guide <span class="sr-only">(current)</span></a>
                 </li>
     
             <li class="nav-item mr-3">
-                <a class="nav-link page-scroll" href="/#pricing" onclick="gtag_report_internal_click('pricing')">Plans</a>
+                <a class="nav-link page-scroll" href="{{site.url}}/#pricing" onclick="gtag_report_internal_click('pricing')">Plans</a>
             </li>
             <li class="nav-item mr-3">
-                <a class="nav-link page-scroll" href="/#team" onclick="gtag_report_internal_click('team')">Team</a>
+                <a class="nav-link page-scroll" href="{{site.url}}/#team" onclick="gtag_report_internal_click('team')">Team</a>
+            </li>
+            <li class="nav-item mr-3">
+                    <a class="nav-link page-scroll" href="{{site.url}}/blog" >Blog</a>
             </li>
         </ul>
     </div>

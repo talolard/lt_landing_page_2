@@ -1,7 +1,7 @@
 ---
 ---
 const endpoint = '{{ site.backend_url }}'
-
+const stripe_key ='{{ site.stripe_pkkey }}'
 
 var handle_name_response = function(response){
     if (response.status===200){
@@ -29,7 +29,7 @@ var check_domain_availibilty = function(e){
 
 var setup_stripe = function(){
     var handler = StripeCheckout.configure({
-        key: 'pk_test_k2jSFVk57XwOmI8n9S9OlwaF',
+        key: stripe_key,
         image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
         locale: 'auto',
         token: handle_stripe_submit
@@ -42,7 +42,7 @@ var setup_stripe = function(){
         zipCode: true,
        name:"LightTag",
        label:"Subscribe to LightTag",
-       "panel-label":"Subscribe to LightTag",
+       "panelLabel":"Subscribe to LightTag",
        description:"LightTag Subscription",
        image:"/assets/img/icon.png",
        locale:"auto"
@@ -64,7 +64,9 @@ var handle_stripe_submit = function(token){
     debugger
     fetch(url,{
         method:"POST",
-        body:JSON.stringify(token)
+        body:JSON.stringify(token),
+        headers: {"Content-Type": "application/json"}
+
     })
     .then(response=>{
         if (response.status ===200){
