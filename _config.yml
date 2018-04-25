@@ -47,7 +47,7 @@ stripe_pkkey: pk_live_JTWP9f4AtWMDL6LWnu9Niw0w
 
 collections:
   posts:
-    permalink: /blog1/:slug
+    permalink: /blog/:slug/
   pages:
     permalink: /blog/:basename
 
