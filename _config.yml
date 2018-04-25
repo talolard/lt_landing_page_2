@@ -14,21 +14,33 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: LightTag - The easy way to annotate text
+email: hello@lighttag.io
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  LightTag is the easy way to label text with a team. We provide an annotation interface,
+  the infrastructure to work with multiple annotators, analytics on your project (such as inter annotator agreement)
+  and the ability to upload pre-annotations to help your annotators work faster.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://lighttag.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: jekyllrb #TODO need to fix
+logo: /assets/img/logo.png
+read_time: true
+mathjax: false
+google_fonts:
+  - name: "Source Sans Pro"
+    weights: "400,400i,700,700i"
+  - name: "Lora"
+    weights: "400,400i,700,700i"
+feed:
+  path: atom.xml
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
 
 # Build settings
 markdown: kramdown
-plugins:
-  - jekyll-feed
 
 backend_url: https://onboarding.lighttag.io/
 stripe_pkkey: pk_live_JTWP9f4AtWMDL6LWnu9Niw0w

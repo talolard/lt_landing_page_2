@@ -2,6 +2,7 @@
 layout: post
 title:  "Active Learning:\n Optimization != Improvement"
 categories: NLP ML "Active Learning"
+description: "Active Learning promises to reduce the labeling cost for building a model. We look into how that works out and ask if active learning delivers on what we really need"
 share: true
 
 ---
