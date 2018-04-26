@@ -52,3 +52,7 @@ collections:
     permalink: /blog/:basename
 
 site.google_analytics: UA-113289574-1
+
+collections:
+  legal:
+    output: true
