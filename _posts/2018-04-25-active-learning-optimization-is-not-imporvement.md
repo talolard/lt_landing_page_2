@@ -206,3 +206,17 @@ The lesson I’m alluding to is that just because robots (or active learning) ma
 
 
 
+## Technical addendum
+
+Active Learning is a broad and well established field but to keep this post within a decent length we didn't cover all of it. For the inquistive reader, we suggest you take a look at
+[Active Learning Literature Survey, Burr Settles](http://burrsettles.com/pub/settles.activelearning.pdf). 
+
+### Query by committee
+Importantly, the active learning method we presented above is the most naive form of what is called "uncertainty sampling" where we chose to sample based on how uncertain our model was. An alternative approach, called Query by Committee, maintains a collection of models (the committee) and selecting the most "controversial" data point to label next, that is one where the models disagreed on. Using such a committee may allow us to overcome the restricted hypothesis a single model can express, though at the onset of a task we still have no way of knowing what hypothesis we should be using. 
+
+In either case (QBC or US) it's our (the data scientists) job to anticipate these problems and adjust for them. A sampling algorithm that mixes the uncertainty/controversialness with some mechanism to improve overall sample representativness can improve performance. 
+
+### Search instead of Label
+In some ways active learning is a way to let the model ask the labeler for feedback. This concept can be extended to allowing the labeler to introduce their knoweledge into either the model or the data. In [Why Label when you can Search](http://pages.stern.nyu.edu/~fprovost/Papers/guidedlearning-kdd2010.pdf) Attenberg and Provost argue this point convcingly, espeacially in the case of highly imbalanced data. Their premise is that the labeler knows what the is being searched for, and that knoweledge can be used to quickly get to the most relevant examples. 
+
+In [Closing the Loop: Fast, Interactive Semi-Supervised Annotation With Queries on Features and Instances](http://aclweb.org/anthology/D/D11/D11-1136.pdf) Settles introduces [Dualist](https://github.com/burrsettles/dualist) a system that mixes Active Learning, semi supervised learning and "feature labeling". Feature Labeling extends active learning by having the "model ask about a particular feature". See the [demo here](https://vimeo.com/21671958). 

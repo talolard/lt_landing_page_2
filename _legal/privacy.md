@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /legal/privacy
+permalink: /legal/privacy/
 title: Privacy Policy
 ---
 

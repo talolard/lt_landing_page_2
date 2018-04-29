@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /legal/tos
+permalink: /legal/tos/
 title: Terms of Service
 ---
 
