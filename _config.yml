@@ -38,6 +38,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-twitter-plugin
 
 # Build settings
 markdown: kramdown
@@ -52,6 +53,8 @@ collections:
     permalink: /blog/:basename
     url: /blog/:basename
   legal:
+    output: true
+  projects:
     output: true
 
     
