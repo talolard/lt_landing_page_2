@@ -40,7 +40,7 @@ permalink: /contact/
                     
                     <div class="form-group row">
                         <div class="offset-sm-3 col-md-8">
-                            <button class="btn btn-white btn-radius text-primary btn-lg mt-3 col-md-7 col-sm-3 offset-md-2 " >
+                            <button id="send-btn" class="btn btn-white btn-radius text-primary btn-lg mt-3 col-md-7 col-sm-3 offset-md-2 " >
                                 Schedule a call 
                             </button>
                         </div>
@@ -57,7 +57,7 @@ permalink: /contact/
 
 $('#contact-form').on('submit', function (e) {
 
-
+    
     if (!e.isDefaultPrevented()) {
         var formData =$(this).serializeArray();
         var _data = {};
@@ -66,6 +66,7 @@ $('#contact-form').on('submit', function (e) {
         }
 
         var url = "https://lighttag.io/rest/contact/";
+        $('#send-btn').prop('disabled',true);
 
         // POST values in the background the the script URL
         $.ajax({
