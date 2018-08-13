@@ -44,7 +44,7 @@ plugins:
 markdown: kramdown
 
 backend_url: https://onboarding.lighttag.io/
-stripe_pkkey: pk_live_JTWP9f4AtWMDL6LWnu9Niw0w
+stripe_pkkey: pk_live_uNZmwgWUAMmyMDv5xHFKbrxG
 
 collections:
   posts:
