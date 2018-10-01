@@ -10,9 +10,6 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-113289574-1');
-        gtag('config', 'GA_TRACKING_ID', {
-            'link_attribution': true
-        });
 
     </script>
 
@@ -39,10 +36,12 @@
                     window.location = url;
                 }
             };
+
             gtag('event', 'conversion', {
                 'send_to': 'AW-815712820/gkzxCNu19n0QtJT7hAM',
                 'event_callback': callback
             });
+            
             return false;
         }
     </script>
@@ -54,6 +53,11 @@
                     window.location = url;
                 }
             };
+            gtag('config', 'UA-113289574-1', {
+              'page_title' : to,
+              'page_path': '/'+to
+            });
+
             gtag('event', 'click', {
                 'event_category':'internal_link',
                 'event_label':to,
