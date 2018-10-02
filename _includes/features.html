@@ -1,95 +1,62 @@
-<section class="bg-orange" id="features">
+<section  id="features">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-xs-12 text-center wow fadeIn">
-                    <h2 class="text-primary">Why Choose LightTag?</h2>
+                    <h2 class="text-white">Why Choose LightTag?</h2>
                     <p class="lead text-white feature-text">
                         Annotate faster, more accurately and at scale
                     </p>
                 </div>
             </div>
-            <div class="row">
 
-                    <div class="offset-md-3 col-md-6 embed-responsive embed-responsive-16by9">
-                            <iframe  src="https://www.youtube.com/embed/dA2uo9sGIj8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                    </div>
-                          
-            </div>
+            {% include landing/feature.html 
+                title="Easy to use"
+                text="Your expert annotators are their to label. LightTag's interface ensures they can focus on labeling and do so as quickly and accurately as possible." 
+                icon="sentiment_very_satisfied"
+            %}
+            {% include landing/feature.html 
+                title="Robust"
+                text="LightTag supports named entity recognition, single and multi class document classification as well as phrase based and dependency based structures." 
+                icon="sentiment_very_satisfied"
+            %}
+            {% include landing/feature.html 
+                title="Language Agnostic"
+                text="Annotate any language including RTL and CJK languages. LightTag makes no assumptions about your vocabulary or tokenization scheme and you can annotate phrases and subwords natively.  " 
+                icon="sentiment_very_satisfied"
+            %}
 
-            <div class="row d-md-flex mt-4 text-center">
-                <div class="col-sm-4 mt-2">
-                    <div class="card border-none wow fadeIn">
-                        <div class="card-block bg-orange text-white">
-                            <i class="material-icons dp36 icon-box text-white">sentiment_very_satisfied</i>
-                            <h5 class="card-title text-primary pt-5">Easy to use</h5>
-                            <p class="card-text text-justify feature-text">LightTag's modern interface makes annotating easy. Keyboard shortcuts and optimized layouts means your 
-                                team can work fast without making mistakes</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 mt-2">
-                    <div class="card border-none wow fadeIn">
-                        <div class="card-block bg-orange text-white">
-                            <i class="material-icons dp36 icon-box">group_add</i>
-                            <h5 class="card-title text-primary pt-5">Built for teams</h5>
-                            <p class="card-text text-justify feature-text">LightTag makes annotating with a team simple. As a project manager you define how many annotators you'd like to work on each example. 
-                                    <br/>
-                                    LightTag will automatically allocate work accordingly, and let you aggregate annotations or view them on an annotator by annotator basis. 
-                                You'll never need to assign work yourself or track which examples have been covered, LightTag does it for you.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 mt-2">
-                    <div class="card border-none wow fadeIn">
-                        <div class="card-block bg-orange text-white">
-                            <i class="material-icons dp36 icon-box">grid_off</i>
-                            <h5 class="card-title text-primary pt-5">Fully Managed and devops free</h5>
-                            <p class=" card-text text-justify feature-text">
-                                Our hosted solution is fully managed and includes daily backups with long retentions and a redundant cluster of servers to ensure high availbility. 
-                            <br/>
-                                You'll never have to configure a database or monitor a server.
-                                Additionally, each LightTag customer operates on an isolated LightTag instance on their own subdomain (you.lighttag.io) 
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 mt-2">
-                    <div class="card border-none wow fadeIn">
-                        <div class="card-block bg-orange text-white">
-                            <i class="material-icons dp36 icon-box">trending_up</i>
-                            <h5 class="card-title text-primary pt-5">Analytics</h5>
-                            <p class="card-text text-justify feature-text">It's not enough to gather data. You need to know what you have and spot problems early. 
-                                <br/> 
-                                LightTag tracks your projects progess and reports inter annotator agreement as well as highlighting individual annotator performance
-                                </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 mt-2">
-                        <div class="card border-none wow fadeIn">
-                            <div class="card-block bg-orange text-white">
-                                <i class="material-icons dp36 icon-box">trending_up</i>
-                                <h5 class="card-title text-primary pt-5">Use any Language</h5>
-                                <p class="card-text text-justify feature-text">LightTag makes no assumptions about your data and fully supports RTL and CJK languages out of the box. <br/>
-                                    LightTag supports intra word annotations that are crucial for data with rich morphology as well as intra word annotations for capturing complex
-                                    phrases.
-                                </p>
-                            </div>
-                        </div>
-                </div>
-                <div class="col-sm-4 mt-2">
-                        <div class="card border-none wow fadeIn">
-                            <div class="card-block bg-orange text-white">
-                                <i class="material-icons dp36 icon-box">trending_up</i>
-                                <h5 class="card-title text-primary pt-5">Automate</h5>
-                                <p class="card-text text-justify feature-text">Upload your own dictionariers, regular expressions or models to provide suggestions to your annotators.<br/> 
-                                    Or let LightTag learn from your annotators as they go.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            {% include landing/feature.html 
+                title="Intelligent Automation"
+                text="LightTag learns from your annotators as they work, generating suggestions for further annotations. By combining reinforcement and deep learning methods
+                LightTag's models converge to a high accuracy fast!" 
+                icon="sentiment_very_satisfied"
+            %}
+            {% include landing/feature.html 
+                title="It Just Works &trade;"
+                text="No software to install. No Servers to configure, No network ports to open.  Enjoy the peace of mind of high availbility, daily data backups and an intuitive
+                management interface without writing one line of code.  " 
+                icon="sentiment_very_satisfied"
+            %}
+
+            {% include landing/feature.html 
+                title="Built for teams"
+                text="LightTag makes annotating with a team simple. As a project manager you define how many annotators you'd like to work on each example. 
+                <br/>
+                LightTag will automatically allocate work accordingly. That's it. No need to assign tasks to labelers and no need for labelers to find the next piece of work. "
+                icon="sentiment_very_satisfied"
+            %}
+
+            {% include landing/feature.html 
+                title="Enterprise Ready"
+                text="Your data is sensitive and can't go to the cloud. Wether you need to be HIPAA compliant or are dealing with proprietary records, you must run your labeling projects on premise. 
+                LightTag is designed for you. Our on premise offering includes everything in the SaaS as well as enterprise necesetieis such as SSO, Active Directory integrations and immutable audit logs.
+                And best of all, it still Just Works &trade;
+                "
+                icon="sentiment_very_satisfied"
+            %}
+
+
+
         </div>
     </section>
     
